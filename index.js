@@ -25,9 +25,8 @@ app.get('/messages/new', ( req, res )=>{
 app.post('/messages/new', ( req, res )=>{
   console.log(req.body)
   messages.push(req.body)
-  res.redirect('/messages')
-});
-
+  res.redirect('/messages');
+})
 
 //show route
 app.get('/messages/:indexOfMessagesArray', ( req, res )=>{
