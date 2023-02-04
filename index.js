@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
-
-app.get('/', ( req, res )=>{
-    res.send('Hello World!');
+const port = 3000
+const messages = require('./models/messages')
+console.log(messages)
+//index route
+app.get('/messages', ( req, res )=>{
+    res.send(messages);
   });
 
   app.get('/new', ( req, res )=>{   
@@ -10,18 +13,11 @@ app.get('/', ( req, res )=>{
 });
 
 
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    }
- ];
+//show route
+/*  app.get('/messages/:indexOfMessagesArray', ( req, res )=>{
+    res.send(messages[req.params.indexOfMessagesArray])
+}) */
+ 
 
 
 
@@ -37,4 +33,7 @@ const messages = [
 
 
 
-  app.listen(3000);
+
+  app.listen(port,()=>{
+    console.log('message app is running on port',  port)
+  })
