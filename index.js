@@ -9,6 +9,9 @@ const messages = require('./models/messages')
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
+app.use(express.static('public'));
+
+
 
 //index route
 app.get('/messages', ( req, res )=>{
