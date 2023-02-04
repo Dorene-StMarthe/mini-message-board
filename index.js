@@ -14,9 +14,9 @@ app.get('/messages', ( req, res )=>{
 
 
 //show route
-/*  app.get('/messages/:indexOfMessagesArray', ( req, res )=>{
-    res.send(messages[req.params.indexOfMessagesArray])
-}) */
+app.get('/messages/:indexOfMessagesArray', ( req, res )=>{
+    res.render('show.ejs')
+}) 
  
 
 
