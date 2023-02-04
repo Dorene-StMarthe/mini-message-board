@@ -2,15 +2,30 @@ const express = require('express');
 const app = express();
 const port = 3000
 const messages = require('./models/messages')
-console.log(messages)
+
+
+
+
+//middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended:true }));
+
 //index route
 app.get('/messages', ( req, res )=>{
-    res.render('index.ejs',{allMessages: messages
-    });
+  res.render('index.ejs',{allMessages: messages
   });
+});
 
-  app.get('/new', ( req, res )=>{   
-    res.send('New Messages')
+app.get('/messages/new', ( req, res )=>{   
+    res.render('form.ejs')
+});
+
+
+//create route
+app.post('/messages/new', ( req, res )=>{
+  console.log(req.body)
+  messages.push(req.body)
+  res.redirect('/messages')
 });
 
 
