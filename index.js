@@ -20,7 +20,7 @@ app.get('/messages', ( req, res )=>{
 });
 
 app.get('/messages/new', ( req, res )=>{   
-    res.render('form.ejs')
+    res.render('index.ejs')
 });
 
 

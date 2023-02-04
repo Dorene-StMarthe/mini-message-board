@@ -24,8 +24,18 @@
             </li> 
         <% } %>
     </ul>
-    <div>
+        <form method="POST" action="/messages/new">
+            <label for="user"></label>
+            <input type="text" name="user" id="user"/>
+            <label for="text"></label>
+            <input type="text" name="text" id="text" />
+            <label for="added" id="added"></label>
+            <input type="submit" value="Send Message">
+    
+        </form>
+
+   <!--  <div>
         <a href="/messages/new">Create New Message</a>
-    </div>
+    </div> -->
 </body>
 </html>
