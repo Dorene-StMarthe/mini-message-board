@@ -5,7 +5,8 @@ const messages = require('./models/messages')
 console.log(messages)
 //index route
 app.get('/messages', ( req, res )=>{
-    res.send(messages);
+    res.render('index.ejs',{allMessages: messages
+    });
   });
 
   app.get('/new', ( req, res )=>{   
