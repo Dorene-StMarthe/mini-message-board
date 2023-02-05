@@ -18,7 +18,7 @@ h1 {
 }
 
 a {
-  color: orange;
+ 
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
   font-size: 1.5em;
@@ -39,6 +39,7 @@ li {
   margin: 10px;
   padding-left: 20px;
   max-width: 70%;
+  border-radius: 20px;
 }
 
 li a {
@@ -47,13 +48,19 @@ li a {
 
 input[type=text] {
   padding: .3em;
+  background-color: black;
+  color: white;
+  max-width: 40%;
+  border-radius: 10px;
 }
 
 input[type=submit] {
   padding: .3em;
   color: black;
-  background: mediumseagreen;
+  background: rgb(221, 232, 226);
   font-size: 1em;
   border-radius: 10%;
 }
-
+form{
+    padding:40px;
+}
