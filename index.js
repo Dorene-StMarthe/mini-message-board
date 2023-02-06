@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000
 const messages = require('./models/messages')
-
-
+require('dotenv').config()
 
 
 //middleware
@@ -35,22 +34,6 @@ app.post('/messages/new', ( req, res )=>{
 app.get('/messages/:indexOfMessagesArray', ( req, res )=>{
     res.render('show.ejs', { message:messages[req.params.indexOfMessagesArray]})
 }) 
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   app.listen(port,()=>{
