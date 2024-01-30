@@ -1,5 +1,4 @@
 
-
 body {
 background-color: white;
   margin: 0;
@@ -45,7 +44,7 @@ ul{
 
 input[type=text] {
   padding: .3em;
-  background-color: black;
+  background-color: rgba(209, 194, 194, 0.25);
   color: white;
   max-width: 40%;
   border-radius: 10px;
